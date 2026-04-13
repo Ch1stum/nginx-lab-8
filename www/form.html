@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Регистрация на мастер-класс</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Регистрация на мастер-класс</h1>
+    <form action="process.php" method="POST">
+        <input type="text" name="name" placeholder="Введите имя" required>
+        
+        <label>Дата рождения:</label>
+        <input type="date" name="birth_date" required>
+        
+        <select name="theme" required>
+            <option value="">Выберите тему мастер-класса</option>
+            <option value="clay">Глиняные горшки</option>
+            <option value="drawing">Рисование</option>
+            <option value="dance">Танцы</option>
+        </select>
+        
+        <label>
+            <input type="checkbox" name="materials" value="1"> Материалы включены
+        </label>
+        
+        <p>Формат участия:</p>
+        <label>
+            <input type="radio" name="format" value="online" required> Онлайн
+        </label>
+        <label>
+            <input type="radio" name="format" value="offline"> Очно
+        </label>
+        
+        <button type="submit">Записаться</button>
+    </form>
+    
+    <br>
+    <a href="index.php">Посмотреть записи</a>
+</body>
+</html>

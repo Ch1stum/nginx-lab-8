@@ -1,0 +1,7 @@
+{
+    "name": "ch1stum/lab8",
+    "require": {
+        "guzzlehttp/guzzle": "^7.10",
+        "predis/predis": "^3.4"
+    }
+}
