@@ -1,1 +1,5 @@
-/vendor/
+# Auto detect text files and perform LF normalization
+* text=auto
+/vendor
+.env.local
+.env.test

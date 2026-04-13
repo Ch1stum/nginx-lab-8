@@ -2,7 +2,7 @@
 
 use PHPUnit\Framework\TestCase;
 
-require_once __DIR__ . '/../www/Student.php';
+require_once __DIR__ . '/../vendor/autoload.php';
 
 class StudentMockTest extends TestCase
 {
@@ -15,8 +15,7 @@ class StudentMockTest extends TestCase
 
         $this->pdoMock->expects($this->once())
             ->method('exec')
-            ->willReturn(true);
-
+            ->willReturn(0);
         $this->student = new Student($this->pdoMock);
     }
 
