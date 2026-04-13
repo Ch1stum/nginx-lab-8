@@ -1,9 +1,15 @@
-FROM php:8.2-fpm
+FROM php:8.4-fpm
 
-# Устанавливаем расширения для работы с MySQL
-RUN docker-php-ext-install pdo pdo_mysql
+RUN apt-get update && apt-get install -y \
+    curl \
+    unzip \
+    libsqlite3-dev \
+    && rm -rf /var/lib/apt/lists/*
 
-WORKDIR /var/www/html
-COPY ./www /var/www/html
+RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
+
+RUN docker-php-ext-install pdo pdo_mysql pdo_sqlite
+
+WORKDIR /var/www
 
 CMD ["php-fpm"]

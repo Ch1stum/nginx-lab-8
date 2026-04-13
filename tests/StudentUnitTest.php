@@ -4,7 +4,7 @@ use PHPUnit\Framework\TestCase;
 
 require_once __DIR__ . '/../www/Student.php';
 
-class StudentTest extends TestCase
+class StudentUnitTest extends TestCase
 {
     private $pdo;
     private $student;
